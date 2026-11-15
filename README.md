@@ -2,11 +2,18 @@
 
 当前共有 **3 个插件**：1 个基础服务、2 个功能插件，均为预览版。
 
-| 插件 | ID | 功能 |
-| --- | --- | --- |
-| 局域网连接 | `lan-core` | 发现、配对和管理同一局域网内的设备，是另外两个插件的前置。 |
-| 局域网剪贴板共享 | `lan-clipboard` | 在已配对的设备间同步新复制的文本和图片。 |
-| 局域网文件分享 | `lan-files` | 向已配对的设备发送文件或文件夹，接收方确认后开始传输。 |
+## 基础服务
+
+| 插件 | 版本 | 功能 | 下载 |
+| --- | --- | --- | --- |
+| 局域网连接 (`lan-core`) | 1.0.0 | 发现、配对和管理同一局域网内的设备。 | [Windows x64 ZIP](https://github.com/EienSakura/Hotaru-Plugins/releases/download/lan-core-v1.0.0/hotaru-plugin-lan-core-1.0.0-x64.zip) |
+
+## 功能插件
+
+| 插件 | 版本 | 功能 | 下载 |
+| --- | --- | --- | --- |
+| 局域网剪贴板共享 (`lan-clipboard`) | 1.0.0 | 在已配对的设备间同步新复制的文本和图片。 | [Windows x64 ZIP](https://github.com/EienSakura/Hotaru-Plugins/releases/download/lan-clipboard-v1.0.0/hotaru-plugin-lan-clipboard-1.0.0-x64.zip) |
+| 局域网文件分享 (`lan-files`) | 1.0.0 | 向已配对的设备发送文件或文件夹，接收方确认后开始传输。 | [Windows x64 ZIP](https://github.com/EienSakura/Hotaru-Plugins/releases/download/lan-files-v1.0.0/hotaru-plugin-lan-files-1.0.0-x64.zip) |
 
 ## 使用
 

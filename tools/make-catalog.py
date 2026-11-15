@@ -14,6 +14,7 @@ from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 IID = "app.hotaru.LanPackage/1.0"
 NAME = re.compile(r"[A-Za-z0-9][A-Za-z0-9_.-]{0,119}\Z")
 MIB = 1024 * 1024
+CATALOG_VALIDITY_DAYS = 365
 
 
 def create(config, assets):
@@ -71,10 +72,10 @@ def main():
     parser.add_argument("--assets", required=True, type=Path)
     parser.add_argument("--out", required=True, type=Path)
     parser.add_argument("--sequence", required=True, type=int)
-    parser.add_argument("--days", type=int, default=30)
+    parser.add_argument("--days", type=int, default=CATALOG_VALIDITY_DAYS)
     parser.add_argument("--key", required=True, action="append", type=Path)
     args = parser.parse_args()
-    if not 0 < args.sequence <= 2147483647 or not 0 < args.days <= 90 or len(args.key) > 4:
+    if not 0 < args.sequence <= 2147483647 or not 0 < args.days <= CATALOG_VALIDITY_DAYS or len(args.key) > 4:
         parser.error("序号、有效期或签名数超限")
     config = json.loads(args.config.read_text(encoding="utf-8"))
     now = dt.datetime.now(dt.timezone.utc).replace(microsecond=0)
